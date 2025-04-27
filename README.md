@@ -8,6 +8,7 @@ Este é um projeto simples de **Gerenciador de Tarefas** feito em **JavaScript**
 
 - Adicionar novas tarefas à lista.
 - Remover tarefas pelo índice.
+- Concluir tarefas ✅ (marcar como feitas).
 - Exibir todas as tarefas adicionadas.
 - Encerrar o programa.
 

@@ -5,8 +5,9 @@ while (true){
         "Escolha uma opção:\n" +
         "1 - Adicionar tarefa\n" +
         "2 - Remover tarefa\n" +
-        "3 - Exibir lista\n" +
-        "4 - Sair"
+        "3 - Concluir tarefa\n" +
+        "4 - Exibir lista\n" +
+        "5 - Sair"
     )
 
     if (opcao === '1'){
@@ -40,6 +41,21 @@ while (true){
     } else if (opcao === '3') {
         if (listaTarefas.length === 0) {
             console.log("A lista está vazia.");
+            continue
+        }
+
+        let indice = Number(prompt("Digite o índice da tarefa que deseja marcar como concluída:"))
+
+        if (indice >= 0 && indice < listaTarefas.length) {
+            listaTarefas[indice] = `✅ ${listaTarefas[indice]}`
+            console.log(`Tarefa marcada como concluída: ${listaTarefas[indice]}`);
+        } else {
+            console.log("Índice inválido.");
+        }
+
+    } else if (opcao === '4') {
+        if (listaTarefas.length === 0) {
+            console.log("A lista está vazia.");
         } else {
             // percorrer e exibir os itens da lista.
             let listaExibida = "Lista de Tarefas:\n"
@@ -49,7 +65,7 @@ while (true){
             console.log(listaExibida);
         }
 
-    } else if (opcao === '4') {
+    } else if (opcao === '5') {
         console.log("Programa encerrado.");
         break
 
